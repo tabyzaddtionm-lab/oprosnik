@@ -1,0 +1,29 @@
+{
+  "name": "questionhub",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:survey": "npm run dev --workspace=@questionhub/survey",
+    "dev:results": "npm run dev --workspace=@questionhub/results",
+    "build": "npm run build:survey && npm run build:results",
+    "build:survey": "npm run build --workspace=@questionhub/survey",
+    "build:results": "npm run build --workspace=@questionhub/results",
+    "lint": "npm run lint --workspace=@questionhub/survey && npm run lint --workspace=@questionhub/results",
+    "typecheck": "npm run typecheck --workspace=@questionhub/survey && npm run typecheck --workspace=@questionhub/results",
+    "test": "npm run test --workspace=@questionhub/core"
+  },
+  "devDependencies": {
+    "@types/node": "20.19.25",
+    "@types/pg": "8.15.6",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "eslint": "9.39.1",
+    "eslint-config-next": "16.3.4",
+    "tsx": "4.23.1",
+    "typescript": "5.9.3"
+  }
+}
+

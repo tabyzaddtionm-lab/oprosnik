@@ -1,0 +1,19 @@
+{
+  "name": "@questionhub/core",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./ai": "./src/ai.ts",
+    "./analytics": "./src/analytics.ts",
+    "./auth": "./src/auth.ts",
+    "./db": "./src/db.ts",
+    "./survey": "./src/survey.ts",
+    "./validation": "./src/validation.ts"
+  },
+  "scripts": {
+    "test": "tsx --test src/*.test.ts"
+  },
+  "dependencies": {
+    "pg": "8.16.3"
+  }
+}
